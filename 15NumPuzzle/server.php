@@ -2,7 +2,7 @@
     $moves=$_POST['move'];
 	$team = $_POST['team'];
 	$mat = $_POST['solution'];
-	$fileHandle = fopen("15numberpuzzle", 'a');
+	$fileHandle = fopen("15numberpuzzle.txt", 'a');
 	
 	fwrite($fileHandle, "\t\tTeam : ".$team."\n\n");
 	fwrite($fileHandle, "\t\tMoves : ".$moves."\n\n");
