@@ -1,0 +1,68 @@
+*
+        {
+            font-family: Arial;
+            background-color:#30231d;
+            color:white;
+        }
+        body
+        {
+            font-size: 15pt;
+            color:black;
+        }
+        .cell
+        {
+            width: 50px;
+        }
+        h3
+        {  
+            text-align:left;
+        }
+        h4
+        {
+            text-align:left;
+            
+        }
+        .num
+        {
+           
+          padding: 15px 25px;
+          font-size: 25px;
+          cursor: pointer;
+          text-align: center;
+          text-decoration: none;
+          outline: none;
+          color: #fff;
+          background-color: #4CAF50;
+          border: none;
+          border-radius: none;
+          width: 15px;
+        }
+        #moves
+        {
+            border: 1px solid #FF6600;
+            background-color: #FFFFCC;
+            font-weight: bold;
+            padding: 2px 5px;
+            color: #FF6600;
+        }
+        a
+        {
+            color: Blue;
+        }
+        #desc
+        {
+            display: block;
+            width: 500px;
+            text-align: justify;
+            font-size: 0.8em;
+            color:#909090;
+        }
+        #txt {
+         border:none;
+         font-family:verdana;
+         font-size:16pt;
+         font-weight:bold;
+         border-right-color:#FFFFFF
+         color:white;
+         text-align:right;
+}
