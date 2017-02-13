@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery-1.9.1.js"></script>
+	<script src="15numberpuzzle.js"></script>
+</head>
+<body onload="Reset()">
+      <center>
+        <h2>15 Number Puzzle</h2></center>
+        <h3>Read the instructions carefully.</h3>
+        <h4>1.You can move only if adjacent cell is empty(left,right,up,down). You have to click on the cell that you want to move.
+        <br />1. Don't refresh the page , if you refresh the page you will be automatically logged out from the event.
+        <br />2. If you shuffle the game , your previous moves will be retained and one extra move will be counted for every shuffle.
+        <br />3. Submit button works only once. And if time is over, your response will be saved automatically.
+        <br />4. There is relative marking,so don't be panic.
+        <br />5. Number of moves should be taken into account. Minimum number of moves will be ranked high.   
+        <br />6. Organiser's decision are final.
+        <br />
+        </br>
+        </h4>
+        <form name="cd">
+        Time Left: <input id="txt" readonly="true" type="text" value="60:00" border="0" name="disp" style="text-align:left;color:white;" >
+        </form>
+        <center>
+        <br /><br />
+        Team Name: <input type="text" id="Team Name"/>
+        <br />
+        <br /><br><br>
+        <table cellpadding="0" cellspacing="4" align="center" id="tbl">
+        </table>
+        <br />
+        <br />
+        <br />
+        <rows type="text" id="rows" value="4" size="3" style="text-align: center;" />
+        <cols type="text" name="cols" id="cols" value="4" size="3" style="text-align: center;" />
+
+        <input type="button" value="Shuffle" onclick="Reset()" style="color:white" />
+        <input type = "button" style="margin-left:40px" style = "visibility:visible;" value = "Submit" onclick="this.style.visibility='hidden',onSubmit()">
+        <br />
+        <br />
+        Moves: <span id="moves">0</span>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </center>
+</body>
+</html>
