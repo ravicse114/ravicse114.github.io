@@ -272,6 +272,7 @@ function init() {
 	var data = fileRead("time.txt");
 	mins = parseInt(data.substring(0,2));
 	secs = parseInt(data.substring(3,5));
+	window.alert("Time is "+disp(mins,secs));
 	redo();
 }
 window.onload = init;
