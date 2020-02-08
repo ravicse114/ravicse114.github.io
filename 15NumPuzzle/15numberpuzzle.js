@@ -246,7 +246,7 @@ function redo() {
   		secs = 59;
   		mins--;
  	}
- 	document.cd.disp.value = dis(mins,secs); // setup additional displays here.
+ 	document.cd.txt.value = dis(mins,secs); // setup additional displays here.
  	//console.log(mins+" "+secs);
  	if((mins == 0) && (secs == 0) && (c1==0)&& flag) {
  	c1++;
@@ -255,7 +255,6 @@ function redo() {
   		// window.location = "yourpage.htm" // redirects to specified page once timer ends and ok button is pressed
  	} else {
  		cd = setTimeout("redo()",1000);
- 		
  	}
 }
 function fileRead(file) {
