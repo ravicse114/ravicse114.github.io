@@ -237,7 +237,7 @@ function dis(mins,secs) {
  	} else {
   		disp += secs+" secs ";
  	}
- 	return(disp);
+ 	return (disp);
 }
 var c1=0;
 function redo() {
@@ -246,7 +246,7 @@ function redo() {
   		secs = 59;
   		mins--;
  	}
- 	document.cd.txt.value = dis(mins,secs); // setup additional displays here.
+ 	document.getElementById("txt").value = dis(mins,secs); // setup additional displays here.
  	//console.log(mins+" "+secs);
  	if((mins == 0) && (secs == 0) && (c1==0)&& flag) {
  	c1++;
