@@ -36,7 +36,7 @@ function calculate() {
 	result = "अंतिम दिनांक जरुरी है | कृपया उचित आंकड़ा भरें | ";
   } else if (frequency === "annually") {
 	result = result + "कुल समय  :: " + totalYears + " वर्ष " + totalMonths + " महीना " +remainingDays + " दिन <br>";
-	result = result + "====================================";
+	result = result + "<center>==============</center>";
 	let cumAmount = principal, interest = 0;
     for(let i=0;i<totalYears;i++) {
 		interest = Math.floor((cumAmount*rate)/100);
@@ -51,7 +51,7 @@ function calculate() {
     let cumAmount = principal, interest = 0;
 	let newTotalMonths = totalYears * 12 + totalMonths;
 	result = result + "कुल समय  :: " + newTotalMonths + " महीना " + remainingDays + " दिन <br>";
-	result = result + "====================================";
+	result = result + "<center>==============</center>";
     for(let i=0;i<newTotalMonths;i++) {
 		interest = Math.floor((cumAmount*rate)/1200);
 		cumAmount = cumAmount+interest;
