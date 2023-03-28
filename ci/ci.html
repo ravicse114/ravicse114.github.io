@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Compound Interest Calculator</h1>
+      <form>
+        <label for="principal">मूलधन :</label>
+        <input type="number" id="principal" name="principal" placeholder="Enter the principal amount">
+        <label for="rate">ब्याज दर :</label>
+        <input type="number" id="rate" name="rate" step="0.01" placeholder="Enter the interest rate">
+		<label for="frequency">ब्याज दर प्रकार :</label>
+        <select id="rateType" name="rateType">
+          <option value="monthly">मासिक </option>
+          <option value="annually">वार्षिक </option>
+        </select>
+        <label for="frequency">चक्रवृद्धि ब्याज प्रकार :</label>
+        <select id="frequency" name="frequency">
+          <option value="annually">वार्षिक</option>
+		  <option value="monthly">मासिक</option>
+        </select>
+        <label for="startDate">प्रारम्भ दिनांक :</label>
+        <input type="date" id="startDate" name="startDate">
+        <label for="endDate">अंतिम दिनांक :</label>
+        <input type="date" id="endDate" name="endDate">
+        <input type="button" value="गणना करे " onclick="calculate()">
+      </form>
+      <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
