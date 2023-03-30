@@ -1,9 +1,10 @@
 function isValidDate(d) {
   return d instanceof Date && !isNaN(d);
 }
-var today = new Date().toISOString().substr(0, 10);
-document.getElementById("endDate").defaultValue = today;
-document.getElementById("startDate").defaultValue = today;
+var today = new Date();
+var oneYearAgo = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate()).toISOString().substr(0, 10);
+document.getElementById("endDate").defaultValue = today.toISOString().substr(0, 10);
+document.getElementById("startDate").defaultValue = oneYearAgo;
 function calculate() {
   // Get the input values
   const principal = parseFloat(document.getElementById("principal").value);
