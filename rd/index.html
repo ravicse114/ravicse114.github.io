@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recurring Deposit Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Recurring Deposit Calculator</h1>
+		<div class="form">
+			<div class="form-row">
+				<label for="monthlyDeposit">Monthly Deposit Amount:</label>
+				<input type="number" id="monthlyDeposit" step="0.01" required>
+			</div>
+			<div class="form-row">
+				<label for="interestRate">Interest Rate (yearly in %):</label>
+				<input type="number" id="interestRate" step="0.01" required>
+			</div>
+			<div class="form-row">
+				<label for="tenure">Tenure (in months):</label>
+				<input type="number" id="tenure" required>
+			</div>
+			<div class="form-row">
+				<button onclick="calculateRD()">Calculate Maturity Amount</button>
+			</div>
+		</div>
+		<div class="result">
+			<h2>Maturity Amount:</h2>
+			<p id="rdResult"></p>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

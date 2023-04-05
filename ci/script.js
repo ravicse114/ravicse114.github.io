@@ -47,10 +47,17 @@ function calculate() {
 		cumAmount = cumAmount+interest;
 		result = result + "<br>" + (i+1) + " वर्ष बाद , ब्याज = " + interest + ", कुल राशि  = " + cumAmount;
 	}
-	let newRemainingDays = totalMonths*30+remainingDays;
-	interest = Math.floor((cumAmount*rate*newRemainingDays)/36500);
-	cumAmount = cumAmount+interest;
-	result = result + "<br> बचे हुए  " + newRemainingDays + " दिन का ब्याज  = " + interest + ", कुल राशि  = " + cumAmount;
+	prevCumAmount = cumAmount;
+	if(totalMonths>0) {
+		interest = Math.floor((cumAmount*rate*totalMonths)/1200);
+		cumAmount = cumAmount+interest;
+		result = result + "<br> बचे हुए  " + totalMonths + " महीना का ब्याज  = " + interest + ", कुल राशि  = " + cumAmount;
+	}
+	if(remainingDays>0) {
+		interest = Math.floor((prevCumAmount*rate*remainingDays)/36500);
+		cumAmount = cumAmount+interest;
+		result = result + "<br> बचे हुए  " + remainingDays + " दिन का ब्याज  = " + interest + ", कुल राशि  = " + cumAmount;
+	}
   } else if (frequency === "monthly") {
     let cumAmount = principal, interest = 0;
 	let newTotalMonths = totalYears * 12 + totalMonths;
@@ -61,9 +68,11 @@ function calculate() {
 		cumAmount = cumAmount+interest;
 		result = result + "<br>" + (i+1) + " माह बाद , ब्याज = " + interest + ", कुल राशि  = " + cumAmount;
 	}
-	interest = Math.floor((cumAmount*rate*remainingDays)/36500);
-	cumAmount = cumAmount+interest;
-	result = result + "<br> बचे हुए  " + remainingDays + " दिन का ब्याज  = " + interest + ", कुल राशि  = " + cumAmount;
+	if(remainingDays>0) {
+		interest = Math.floor((cumAmount*rate*remainingDays)/36500);
+		cumAmount = cumAmount+interest;
+		result = result + "<br> बचे हुए  " + remainingDays + " दिन का ब्याज  = " + interest + ", कुल राशि  = " + cumAmount;
+	}
   }
   resultDiv.innerHTML = result;
 }
